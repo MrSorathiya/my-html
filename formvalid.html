@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form validate</title>
+</head>
+<script>
+	function changecolor()
+	{
+		var v;
+		v=((Math.random()*100000)+3);
+		document.bgColor=v;
+		setTimeout("changecolor()",1000);
+	}	
+</script>
+<script>
+	function validform()
+	{
+		var x = document.forms["myform"]["firstname"].value;
+		var y = document.forms["myform"]["lastname"].value;
+		
+		if (x=="" || x==null) 
+		{
+			alert("First name must be filled out");
+			return false;
+		}
+		else (y=="" || y==null) 
+		{
+			alert("Last name must be filled out");
+			return false;
+		}
+		
+	}
+</script>
+<body onload="changecolor();">
+
+<h1>Validation of empty field</h1>
+<p>Try To submit the form without entering any text.</p>
+
+<form name="myform" action="www.google.com" onsubmit="return validform()" method="post" required>
+	
+	<pre>
+		<h2>First Name:<input type="text" name="firstname"><br></h2>
+		<h2>Last Name:<input type="text" name="lastname"><br></h2>
+		
+		
+		      <input type="submit" name="submit" value="submit"><br>
+	</pre>
+</form>
+
+
+
+
+</body>
+</html>

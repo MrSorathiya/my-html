@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+ <script type="text/javascript">
+ 	function add_number() 
+ 	 {
+ 	 	var result, num1, num2;
+
+ 	 	num1 = parseFloat(document.addform.txtnum1.value);
+ 	 	num2 = parseFloat(document.addform.txtnum2.value);
+ 		result = num1 + num2;
+
+ 		document.addform.txtresult.value=result; 	
+ 	 }
+
+ 	 function clear_button()
+ 	 {
+ 	 	document.addform.txtnum1.value=0;
+        document.addform.txtnum2.value=0;
+        document.addform.txtresult.value=0;
+ 	 }
+ </script>
+ 
+</head>
+<body style="background-color: lightskyblue">
+
+<h1 align="center"  style="background-color: gray;"><marquee>Add 2 Number And sum of It</marquee> </h1>
+<form name="addform">
+	<br>
+
+	    <p id="mydiv"></p>
+	     
+         		<table>
+			
+		<h2>First value:</h2>  <input type="text" name="txtnum1" size="35" value="0"><br>
+		<h2>Second value:</h2>  <input type="text" name="txtnum2" size="35" value="0"><br><br>
+		        <input type="button" name="" value="Click to answer" onclick="add_number()">
+        <h2>Show The Result:</h2>   <br>     
+              <input type="text" name="txtresult" size="35" value="0"><br><br>
+                 <input type="button" value="Click clear to reset" onclick="clear_button()">
+
+        </table>
+	
+</body>
+</html>
